@@ -54,7 +54,7 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
 
-        // Find imageView in the cell or create a new one
+        // 셀에서 imageView를 찾거나 없으면 새롭게 만든다.
         let imageView: UIImageView
 
         if let existingImageView = cell.contentView.subviews.compactMap({ $0 as? UIImageView }).first {
@@ -72,9 +72,6 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
 
         return cell
     }
-
-
-
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 4 // 각 섹션에는 4개의 이미지가 있어야 한다.
