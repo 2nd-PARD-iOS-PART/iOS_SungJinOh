@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		881B613E2ACF00B800B506B0 /* SearchCollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881B613D2ACF00B800B506B0 /* SearchCollectionViewTableViewCell.swift */; };
+		887DC11C2AD05C4700E09B7C /* Democell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887DC11B2AD05C4600E09B7C /* Democell.swift */; };
 		88C94AD42AC6F8E20051F6FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C94AD32AC6F8E20051F6FC /* HomeViewController.swift */; };
 		88C94AD62AC6F8F10051F6FC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C94AD52AC6F8F10051F6FC /* SearchViewController.swift */; };
 		88C94AD82AC6F9030051F6FC /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C94AD72AC6F9030051F6FC /* ComingSoonViewController.swift */; };
@@ -43,6 +45,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		881B613D2ACF00B800B506B0 /* SearchCollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		887DC11B2AD05C4600E09B7C /* Democell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Democell.swift; sourceTree = "<group>"; };
 		88C94AD32AC6F8E20051F6FC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		88C94AD52AC6F8F10051F6FC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		88C94AD72AC6F9030051F6FC /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +111,8 @@
 			children = (
 				88C94ADF2AC711600051F6FC /* CollectionViewTableViewCell.swift */,
 				88C94AE12AC726260051F6FC /* HeroHeaderUIView.swift */,
+				881B613D2ACF00B800B506B0 /* SearchCollectionViewTableViewCell.swift */,
+				887DC11B2AD05C4600E09B7C /* Democell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,8 +308,10 @@
 				88EC3DDF2AC2B9C900334152 /* AppDelegate.swift in Sources */,
 				88EC3DE12AC2B9C900334152 /* SceneDelegate.swift in Sources */,
 				88C94AE02AC711600051F6FC /* CollectionViewTableViewCell.swift in Sources */,
+				881B613E2ACF00B800B506B0 /* SearchCollectionViewTableViewCell.swift in Sources */,
 				88C94ADC2AC6F9230051F6FC /* MoreViewController.swift in Sources */,
 				88C94AD82AC6F9030051F6FC /* ComingSoonViewController.swift in Sources */,
+				887DC11C2AD05C4700E09B7C /* Democell.swift in Sources */,
 				88C94AD42AC6F8E20051F6FC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
