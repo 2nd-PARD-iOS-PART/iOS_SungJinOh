@@ -21,7 +21,7 @@ Download 탭의 화면
 <img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/7f18f515-2d78-4fe2-8f5c-1ba376ed0abd" width="300" height="600">
 
 
-* **다운로드 받은 작품들이 저장되어 있는 페이지다.___\\ 띄어쓰기~~다른 거 하다가 하니까 힐링이더라.~~**
+* **다운로드 받은 작품들이 저장되어 있는 페이지다.    ~~다른 거 하다가 하니까 힐링이다.~~**
 
 1. 가운데에 downloadbutton image를 넣었다.
 2. 그 아래에 "Movies and TV shows that you\ndownload appear here." text label을 넣었다.
