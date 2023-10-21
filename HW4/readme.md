@@ -8,6 +8,9 @@ Search 탭의 화면
 
 search tab 설명
 
+
+Download 탭의 화면
+-------------
 <img src="/Users/oseongjin/Desktop/DownloadTab.png" width="40%" height="30%"></img>
 
 download tab 설명
