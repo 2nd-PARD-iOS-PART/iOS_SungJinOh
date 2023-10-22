@@ -2,7 +2,7 @@
 ===============
 
 Homepage 화면
-============
+-----------
 <img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/71ee69fa-dc56-46e8-8d7f-1dc5bec890db" width="300" height="600">
 
 * **넷플릭스 홈페이지 화면이다.**
