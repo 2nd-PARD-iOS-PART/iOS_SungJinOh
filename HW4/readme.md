@@ -1,5 +1,16 @@
 😎 4차 과제_오성진
 ===============
+
+Homepage 화면
+============
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/71ee69fa-dc56-46e8-8d7f-1dc5bec890db" width="300" height="600">
+
+* **넷플릭스 홈페이지 화면이다.**
+1. NavigationBar에 넷플릭스 로고와 여러 옵션이 있다.
+2. header에 포스터 이미지가 크게 있다.
+3. 총 6개의 section마다 4개의 이미지가 있다.
+
+
 Search 탭의 화면 & 스크롤 했을 때의 화면
 -------------
 
