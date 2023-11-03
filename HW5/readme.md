@@ -1,39 +1,27 @@
-😎 4차 과제_오성진
+😎 5차 과제_오성진
 ===============
 
-Homepage 화면
+ComingSoon Page 화면
 -----------
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/71ee69fa-dc56-46e8-8d7f-1dc5bec890db" width="300" height="600">
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/6ad84e1a-b645-4c8b-bde9-9d456cf7da46" width="300" height="600">
 
-* **넷플릭스 홈페이지 화면이다.**
-1. NavigationBar에 넷플릭스 로고와 여러 옵션이 있다.
-2. header에 포스터 이미지가 크게 있다.
-3. 총 6개의 section마다 4개의 이미지가 있다.
+* **넷플릭스에서 새롭게 업데이트 되는 작품들을 나열한 화면이다.**
+1. NavigationBar에 알람 image와 "Notification" text label이 있다.
+2. 1개의 section에 3개의 cell이 있다.
+3. 각 cell마다 image와 작품을 설명하는 text label이 있다.
+4. cellForRowAt 메서드에서 cell을 구성했다.
 
 
-Search 탭의 화면 & 스크롤 했을 때의 화면
+Detail Page 화면
 -------------
 
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/961b9599-acb5-470a-b6a5-2c1d1fa448c5" width="300" height="600">
-
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/14ade077-0207-4f71-a233-40b6ef4ba18a" width="300" height="600">
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/c99cab21-b9bb-420c-8c7f-1e6cc7f53579" width="300" height="600">
 
 
-* **검색 창과 가장 많이 검색된 작품들의 포스터, 제목이 나와있는 페이지다.**
+* **Home page에서 특정 작품을 click하면 해당 작품에 대한 세부 정보를 제공하는 화면이다.**
 
-1. NavigationBar에 "UISearchBar"로 searchBar를 구현하고, "UIImageView"로 마이크 이미지를 넣었다.
-2. header에 "Popular Searches" 텍스트를 추가
-3. section 안의 각각의 행 마다 포스터 이미지, 제목 텍스트, playbutton 이미지를 넣었다.
+1. 최상단에 click한 작품의 image가 있다.
+2. image 위에는 close button과 play button이 있다.
+3. 그 아래에는 제목, 세부 정보, play button, download button 등의 button과 image가 있다.
 
-
-Download 탭의 화면
--------------
-
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/7f18f515-2d78-4fe2-8f5c-1ba376ed0abd" width="300" height="600">
-
-
-* **다운로드 받은 작품들이 저장되어 있는 페이지다.    ~~다른 거 하다가 하니까 힐링이다.~~**
-
-1. 가운데에 downloadbutton image를 넣었다.
-2. 그 아래에 "Movies and TV shows that you\ndownload appear here." text label을 넣었다.
-3. tabBar 위에 "Find Something to Download" button을 넣었다.
+* dictionary를 사용하여 이미지 이름과 제목을 매핑했다. -> 사실 데이터 모델을 만들고 해당 데이터 모델에 따라 이미지와 제목을 관리하는 것이 더 좋음.
