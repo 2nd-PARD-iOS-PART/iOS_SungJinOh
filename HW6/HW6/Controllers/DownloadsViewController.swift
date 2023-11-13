@@ -107,8 +107,14 @@ class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate 
         
         // click 시 이동
         downloadButton.addTarget(self, action: #selector(add), for: .touchUpInside)
-        addButton.addTarget(self, action: #selector(add), for: .touchUpInside)
-        deleteButton.addTarget(self, action: #selector(toggleEditing), for: .touchUpInside)
+        
+        let addButton = UIBarButtonItem(image: UIImage(named: "add.png")?.withRenderingMode(.alwaysOriginal),
+                                                style: .plain, target: self, action: #selector(add))
+                
+        let deleteButton = UIBarButtonItem(image: UIImage(named: "delete.png")?.withRenderingMode(.alwaysOriginal),
+                                                   style: .plain, target: self, action: #selector(toggleEditing))
+                
+        navigationItem.rightBarButtonItems = [deleteButton, addButton]
 
         addConstraints()
         
@@ -128,9 +134,6 @@ class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate 
             downloadTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             downloadTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -150),
             
-            deleteButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
-            deleteButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            
             downloadImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             downloadImage.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100),
             
@@ -141,11 +144,6 @@ class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate 
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -140),
-            
-            addButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
-            addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -70),
-            addButton.widthAnchor.constraint(equalToConstant: 30),
-            addButton.heightAnchor.constraint(equalToConstant: 30),
             
             downloadButton.topAnchor.constraint(equalTo: downloadLabel.bottomAnchor, constant: 230),
             downloadButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
