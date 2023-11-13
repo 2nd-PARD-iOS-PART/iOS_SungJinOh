@@ -13,7 +13,10 @@ let realm = try! Realm() // realm instance 생성
 var info: [DownloadedItem] = []
 var selectedindex : IndexPath?
 
+
 class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate {
+    
+    var isEditingMode = false
     
     let tableView: UITableView = { // tableView라는 UITableView 인스턴스를 선언
         let table = UITableView() //UITableView를 생성
@@ -94,20 +97,27 @@ class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate 
 //        tableView.isEditing = true
 
         // 뷰 계층에 추가
-        view.addSubview(deleteButton)
         view.addSubview(downloadTitle)
         view.addSubview(downloadImage)
         view.addSubview(downloadLabel)
         view.addSubview(downloadButton)
         view.addSubview(tableView)
         view.addSubview(addButton)
+        view.addSubview(deleteButton)
         
         downloadButton.addTarget(self, action: #selector(add), for: .touchUpInside)
         addButton.addTarget(self, action: #selector(add), for: .touchUpInside)
+        deleteButton.addTarget(self, action: #selector(toggleEditing), for: .touchUpInside)
 
         addConstraints()
         
     }
+
+    @objc func toggleEditing() {
+        isEditingMode.toggle()
+        tableView.setEditing(isEditingMode, animated: true)
+    }
+
     
     func addConstraints() {
         // Auto Layout 설정
@@ -117,7 +127,7 @@ class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate 
             downloadTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             downloadTitle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -150),
             
-            deleteButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 60),
+            deleteButton.topAnchor.constraint(equalTo: view.topAnchor, constant: 120),
             deleteButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             
             downloadImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
@@ -152,7 +162,7 @@ class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate 
         present(addMovieVC, animated: true, completion: nil)
     }
 
-//    
+//
 //    @objc func addButtonPressed() {
 //        let addMovieVC = AddMovieViewController()
 //        present(addMovieVC, animated: true, completion: nil)
@@ -238,27 +248,43 @@ extension DownloadsViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath)
-        selectedindex = indexPath
-    }
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let items = realm.objects(DownloadedItem.self)
-            let infoToDelete = items[indexPath.row]
-            do {
-                try realm.write {
-                    realm.delete(infoToDelete)
-                }
-
-                // Update your data source and table view
-                info = Array(items) // Update the info array
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            } catch let error {
-                print("Error deleting from Realm: \(error)")
+        if tableView.isEditing {
+            // Handle cell selection logic for editing mode
+            if let selectedIndexPaths = tableView.indexPathsForSelectedRows {
+                print("Selected Index Paths: \(selectedIndexPaths)")
             }
+        } else {
+            // Handle cell selection logic for normal mode
+            print(indexPath)
+            selectedindex = indexPath
+
+            // Get the selected item from the realm
+            let items = realm.objects(DownloadedItem.self)
+            let selectedItem = items[indexPath.row]
+
+            let detailViewController = DetailViewController(item: selectedItem)
+            present(detailViewController, animated: true, completion: nil)
         }
     }
+
+    
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            let items = realm.objects(DownloadedItem.self)
+//            let infoToDelete = items[indexPath.row]
+//            do {
+//                try realm.write {
+//                    realm.delete(infoToDelete)
+//                }
+//
+//                // Update your data source and table view
+//                info = Array(items) // Update the info array
+//                tableView.deleteRows(at: [indexPath], with: .automatic)
+//            } catch let error {
+//                print("Error deleting from Realm: \(error)")
+//            }
+//        }
+//    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -364,7 +390,7 @@ class AddMovieViewController: UIViewController, UIImagePickerControllerDelegate,
     }
 
     @objc func saveToRealm() {
-        guard 
+        guard
             let title = titleTextField.text,
             let summary = summaryTextField.text,
             let image = selectedImage

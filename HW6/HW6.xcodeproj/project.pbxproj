@@ -13,6 +13,8 @@
 		88396CED2AF13BE300E28ECD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88396CEC2AF13BE300E28ECD /* Movie.swift */; };
 		88B278C32B00BAF000DF5268 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B278C22B00BAF000DF5268 /* AddMovieViewController.swift */; };
 		88B90CC82B023E8B001C4FAC /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B90CC72B023E8B001C4FAC /* MovieDetail.swift */; };
+		88B90CCA2B0248CC001C4FAC /* MovieName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B90CC92B0248CC001C4FAC /* MovieName.swift */; };
+		88B90CCC2B025081001C4FAC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B90CCB2B025081001C4FAC /* DetailViewController.swift */; };
 		88C94AD42AC6F8E20051F6FC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C94AD32AC6F8E20051F6FC /* HomeViewController.swift */; };
 		88C94AD62AC6F8F10051F6FC /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C94AD52AC6F8F10051F6FC /* SearchViewController.swift */; };
 		88C94AD82AC6F9030051F6FC /* ComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88C94AD72AC6F9030051F6FC /* ComingSoonViewController.swift */; };
@@ -55,6 +57,8 @@
 		88396CEC2AF13BE300E28ECD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		88B278C22B00BAF000DF5268 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
 		88B90CC72B023E8B001C4FAC /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		88B90CC92B0248CC001C4FAC /* MovieName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieName.swift; sourceTree = "<group>"; };
+		88B90CCB2B025081001C4FAC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		88C94AD32AC6F8E20051F6FC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		88C94AD52AC6F8F10051F6FC /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		88C94AD72AC6F9030051F6FC /* ComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				88396CEC2AF13BE300E28ECD /* Movie.swift */,
 				88D459EA2AF9F04900268F04 /* Data.swift */,
 				88B90CC72B023E8B001C4FAC /* MovieDetail.swift */,
+				88B90CC92B0248CC001C4FAC /* MovieName.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 				880865EC2AE261DD005199E7 /* Democell.swift */,
 				88396CEA2AF13B9F00E28ECD /* MovieDetailViewController.swift */,
 				88B278C22B00BAF000DF5268 /* AddMovieViewController.swift */,
+				88B90CCB2B025081001C4FAC /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -313,12 +319,14 @@
 				88396CED2AF13BE300E28ECD /* Movie.swift in Sources */,
 				88D459EB2AF9F04900268F04 /* Data.swift in Sources */,
 				88C94AD62AC6F8F10051F6FC /* SearchViewController.swift in Sources */,
+				88B90CCA2B0248CC001C4FAC /* MovieName.swift in Sources */,
 				88C94AE22AC726270051F6FC /* HeroHeaderUIView.swift in Sources */,
 				88EC3DE32AC2B9C900334152 /* ViewController.swift in Sources */,
 				88C94ADA2AC6F9170051F6FC /* DownloadsViewController.swift in Sources */,
 				88396CEB2AF13B9F00E28ECD /* MovieDetailViewController.swift in Sources */,
 				88EC3DDF2AC2B9C900334152 /* AppDelegate.swift in Sources */,
 				88EC3DE12AC2B9C900334152 /* SceneDelegate.swift in Sources */,
+				88B90CCC2B025081001C4FAC /* DetailViewController.swift in Sources */,
 				88C94AE02AC711600051F6FC /* CollectionViewTableViewCell.swift in Sources */,
 				881B613E2ACF00B800B506B0 /* SearchCollectionViewTableViewCell.swift in Sources */,
 				88C94ADC2AC6F9230051F6FC /* MoreViewController.swift in Sources */,

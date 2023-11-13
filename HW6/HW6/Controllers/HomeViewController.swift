@@ -2,9 +2,9 @@ import UIKit
 
 class HomeViewController: UIViewController{
     
-    let sectionTitles: [String] = ["Previews", "Continue Watching for Eron", "My List", "Europe Movie", "Romance/Drama", "Action/Thriller"]
-    
-    let movies = [["movie1", "movie2", "movie3", "movie4"], ["movie5", "movie6", "movie7", "movie8"], ["movie9", "movie10", "movie11", "movie12"], ["movie13", "movie14", "movie15", "movie16"], ["movie17", "movie18", "movie19", "movie20"], ["movie21", "movie22", "movie23", "movie24"]]
+    let sectionTitles = MovieName.sectionTitles
+    let movies = MovieName.movies
+
     
     //HomeViewController 클래스 내에서 tableView라는 이름의 private 속성을 선언하고, 이를 초기화하는 부분
     private let tableView: UITableView = {
