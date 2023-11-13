@@ -105,6 +105,7 @@ class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate 
         view.addSubview(addButton)
         view.addSubview(deleteButton)
         
+        // click 시 이동
         downloadButton.addTarget(self, action: #selector(add), for: .touchUpInside)
         addButton.addTarget(self, action: #selector(add), for: .touchUpInside)
         deleteButton.addTarget(self, action: #selector(toggleEditing), for: .touchUpInside)
@@ -154,6 +155,7 @@ class DownloadsViewController: UIViewController, AddMovieViewControllerDelegate 
         ])
     }
     
+    // data 추가
     @objc func add() {
         print("Add button pressed")
 
@@ -188,6 +190,7 @@ extension DownloadsViewController: UITableViewDelegate, UITableViewDataSource{
         return items.count
     }
     
+    //
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.backgroundColor = .darkGray
@@ -247,6 +250,7 @@ extension DownloadsViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    // cell click
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if tableView.isEditing {
             // Handle cell selection logic for editing mode
@@ -267,24 +271,24 @@ extension DownloadsViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
 
-    
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == .delete {
-//            let items = realm.objects(DownloadedItem.self)
-//            let infoToDelete = items[indexPath.row]
-//            do {
-//                try realm.write {
-//                    realm.delete(infoToDelete)
-//                }
-//
-//                // Update your data source and table view
-//                info = Array(items) // Update the info array
-//                tableView.deleteRows(at: [indexPath], with: .automatic)
-//            } catch let error {
-//                print("Error deleting from Realm: \(error)")
-//            }
-//        }
-//    }
+    // cell 삭제
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let items = realm.objects(DownloadedItem.self)
+            let infoToDelete = items[indexPath.row]
+            do {
+                try realm.write {
+                    realm.delete(infoToDelete)
+                }
+
+                // Update your data source and table view
+                info = Array(items) // Update the info array
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+            } catch let error {
+                print("Error deleting from Realm: \(error)")
+            }
+        }
+    }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
@@ -374,6 +378,7 @@ class AddMovieViewController: UIViewController, UIImagePickerControllerDelegate,
         ])
     }
 
+    // image 고르기
     @objc func selectImage() {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
@@ -382,6 +387,7 @@ class AddMovieViewController: UIViewController, UIImagePickerControllerDelegate,
         present(imagePicker, animated: true, completion: nil)
     }
 
+    // imagePicker 코드
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[.originalImage] as? UIImage {
             selectedImage = image
@@ -389,6 +395,7 @@ class AddMovieViewController: UIViewController, UIImagePickerControllerDelegate,
         picker.dismiss(animated: true, completion: nil)
     }
 
+    // realm에 저장
     @objc func saveToRealm() {
         guard
             let title = titleTextField.text,
