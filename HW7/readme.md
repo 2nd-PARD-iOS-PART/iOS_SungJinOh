@@ -3,23 +3,17 @@
 
 Download Page 화면
 -----------
-* **data 추가 modal**
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/6a54a0e7-479a-4fa2-96a2-ab4f33760c1e" width="300" height="600">
+* **Update 전 page**
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/2bbd109d-dac8-4bab-b165-3fa292962f06" width="300" height="600">
 
-* **imagePicker로 앨범에서 image 고르기**
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/23b2b4bc-44fc-453c-8cf5-c5445f3e793c" width="300" height="600">
+* **Update modal**
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/3d55b681-cd30-4b38-b6ea-044870fea45e" width="300" height="600">
 
-* **swipe로 data 삭제**
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/8d4b5759-c6d3-40b2-896a-f3371a0c82db" width="300" height="600">
+* **Update 후 page**
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/13a27595-eae4-4f18-9119-358e14020df7" width="300" height="600">
 
-* **2개 이상의 data 삭제**
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/f9312280-1fe2-4b72-a897-e9894ba5b47b" width="300" height="600">
+* **서버에서 받은 데이터를 나열하고 서버에 나의 데이터를 추가하는 코드이다.**
 
-
-* **넷플릭스에서 내가 다운로드 받은 작품들을 나열한 화면이다.**
-1. NavigationBar에 "Download" text label과 "add" button과 "delete" button이 있다.
-2. modal을 통해 다운 받은 영화의 제목, 줄거리, 이미지를 입력한다.
-3. 입력한 정보가 realm에 저장되고 저장된 값을 가져와서 tableview에 나타낸다.
-4. "add" button을 누르면 data를 추가할 수 있다.
-5. "delete" button을 누르면 2개 이상의 data를 삭제할 수 있다.
-6. cell을 swipe하면 그 cell과 realm에서의 data가 삭제된다.
+* 오류 찾기 *
+문제: detailAge와 detailPart를 전역 변수로 선언했기 때문에, detailData가 할당될 때 한번만 값을 설정했다.
+해결 방법: 각각이 보여질 때 동적으로 설정할 수 있어야 한다. ->  각 라벨의 텍스트를 설정할 때마다 detailData의 값을 참조하도록 함으로써, detailData가 변경될 때마다 해당 라벨의 텍스트가 업데이트 되게 한다.
