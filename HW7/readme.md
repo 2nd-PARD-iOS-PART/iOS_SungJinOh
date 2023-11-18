@@ -1,7 +1,7 @@
 😎 7차 과제_오성진
 ===============
 
-Download Page 화면
+URL_SERVER 화면
 -----------
 * **Update 전 page**
 <img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/2bbd109d-dac8-4bab-b165-3fa292962f06" width="300" height="600">      
