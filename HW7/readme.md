@@ -14,7 +14,7 @@ Download Page 화면
 
 * **서버에서 받은 데이터를 나열하고 서버에 나의 데이터를 추가하는 코드이다.**      
 http://3.35.236.83/pard/all: 데이터를 요청하고 받아오는 주소    
-viewVontroller에서 "추가" 버튼을 누르면 DetailViewController로 넘어가서 detail page를 구성한다.
+viewController에서 "추가" 버튼을 누르면 DetailViewController로 넘어가서 detail page를 구성한다.
 
 * **오류 찾기**      
 문제: detailAge와 detailPart를 전역 변수로 선언했기 때문에, detailData가 할당될 때 한번만 값을 설정한다.
