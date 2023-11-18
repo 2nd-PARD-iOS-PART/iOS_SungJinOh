@@ -4,13 +4,13 @@
 Download Page 화면
 -----------
 * **Update 전 page**
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/2bbd109d-dac8-4bab-b165-3fa292962f06" width="300" height="600">
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/2bbd109d-dac8-4bab-b165-3fa292962f06" width="300" height="600">      
 
 * **Update modal**
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/3d55b681-cd30-4b38-b6ea-044870fea45e" width="300" height="600">
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/3d55b681-cd30-4b38-b6ea-044870fea45e" width="300" height="600">      
 
 * **Update 후 page**
-<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/13a27595-eae4-4f18-9119-358e14020df7" width="300" height="600">
+<img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/13a27595-eae4-4f18-9119-358e14020df7" width="300" height="600">      
 
 * **서버에서 받은 데이터를 나열하고 서버에 나의 데이터를 추가하는 코드이다.**      
 
