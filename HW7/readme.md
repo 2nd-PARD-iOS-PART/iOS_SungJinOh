@@ -13,7 +13,7 @@ Download Page 화면
 <img src="https://github.com/2nd-PARD-iOS-PART/iOS_SungJinOh/assets/103707815/13a27595-eae4-4f18-9119-358e14020df7" width="300" height="600">      
 
 * **서버에서 받은 데이터를 나열하고 서버에 나의 데이터를 추가하는 코드이다.**      
-http://3.35.236.83/pard/all: 데이터를 요청하고 받아오는 주소
+http://3.35.236.83/pard/all: 데이터를 요청하고 받아오는 주소    
 viewVontroller에서 "추가" 버튼을 누르면 DetailViewController로 넘어가서 detail page를 구성한다.
 
 * **오류 찾기**      
